@@ -1,0 +1,241 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+	max-width: 1050px;
+	margin: 0 auto;
+}
+
+.home {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background: url(../images/Star-Wars.jpg) no-repeat center / cover;
+}
+
+.home-title {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 75px;
+	line-height: 94px;
+	color: #ffffff;
+}
+
+.home-text {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 30px;
+	color: #ffffff;
+	margin-bottom: 100px;
+}
+
+.home-button {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21px;
+	color: #ffffff;
+	text-decoration: none;
+	background: #8dd83d;
+	border-radius: 4px;
+	padding: 10px 30px;
+	transition: all 0.7s ease 0s;
+}
+
+.home-button:hover {
+	background: #5fb503;
+	box-shadow: 0 0 10px 0 #5fb503;
+}
+
+.games {
+	background: linear-gradient(gray, rgb(60, 58, 58));
+	padding: 60px 0 160px 0;
+}
+
+.games-logo {
+	display: block;
+	margin: 0 auto;
+}
+
+.games-title {
+	text-align: center;
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 60px;
+	color: #ffffff;
+}
+
+.games-subtitle {
+	text-align: center;
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 60px;
+	color: #ffffff;
+	margin-bottom: 40px;
+}
+
+.games-row {
+	display: flex;
+	justify-content: center;
+	gap: 25px;
+	flex-wrap: wrap;
+}
+.card {
+	max-width: 320px;
+	flex: 0 0 320px;
+	background: #ffffff;
+	border-radius: 4px;
+	border: 1px solid #8dd83d;
+	overflow: hidden;
+}
+.card-image {
+	height: 180px;
+}
+.card-image-01 {
+	background: url(../images/card-01.jpg) no-repeat center / cover;
+}
+.card-image-02 {
+	background: url(../images/card-02.jpg) no-repeat center / cover;
+}
+.card-image-03 {
+	background: url(../images/card-03.jpg) no-repeat center / cover;
+}
+.card-content {
+	padding: 20px;
+}
+.card-title {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 23px;
+	color: #435766;
+	margin-bottom: 10px;
+}
+.card-text {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 30px;
+	color: #435766;
+	margin-bottom: 40px;
+}
+
+.card-button {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	background: #8dd83d;
+	padding: 20px;
+	border-radius: 4px;
+	color: #ffffff;
+}
+
+.header {
+	background: #373a3c;
+	padding: 11px;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-logo {
+	height: 30px;
+}
+
+.menu-icon {
+	flex: 0 0 30px;
+	width: 30px;
+	height: 30px;
+	background: url(../images/menu-icon.png) no-repeat center / cover;
+	display: none;
+}
+
+.menu-body {
+	display: flex;
+	align-items: center;
+	column-gap: 30px;
+}
+
+.menu-link {
+	font-size: 16px;
+	line-height: 16px;
+	color: rgba(255, 255, 255, 0.5);
+	text-decoration: none;
+	transition: all 0.7s ease 0s;
+}
+
+.menu-link:hover {
+	color: #ffffff;
+	text-shadow: 0 0 5px #8dd83d;
+}
+
+@media (max-width: 600px) {
+	.menu-icon {
+		display: block;
+		position: relative;
+		z-index: 11;
+	}
+
+	.header-logo {
+		position: relative;
+		z-index: 11;
+	}
+
+	.menu-icon.active {
+		background: url(../images/close.png) no-repeat center / cover;
+	}
+
+	.menu-body {
+		position: fixed;
+		left: 0;
+		top: -100%;
+		width: 100%;
+		height: 100%;
+		background: #000;
+
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: 30px;
+
+		transition: all 0.7s ease 0s;
+	}
+
+	.menu-body.active {
+		top: 0;
+	}
+
+	body.active {
+		overflow: hidden;
+	}
+
+	.home-title {
+		font-size: 60px;
+	}
+}
